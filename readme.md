@@ -4,4 +4,4 @@ This repo contains codes of website for Laravel Myanmar.
 
 ### License
 
-update soon
+comming soon
