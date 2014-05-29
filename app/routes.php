@@ -13,5 +13,14 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('pages.home')
+				->with('bodyClass', 'home');
 });
+
+Route::controller('/user', 'UserController');
+
+
+App::bind(
+	'LM\Interfaces\UserRepositoryInterface',  
+	'LM\Repositories\UserRepository'
+);

@@ -1,0 +1,239 @@
+body {
+	font-family: Open Sans, Tharlon;
+	color: #444;
+}
+a {
+	color: #fb503b;
+}
+p {
+	line-height: 26px;
+}
+.container {
+	max-width: 960px;
+}
+input,.form-control {
+	border: 1px solid #f0f0f0;
+	border-radius: 0;
+}
+input:focus,.form-control:focus {
+	box-shadow: none;
+}
+img {
+	max-width: 100%;
+}
+.modal-content {
+	border-radius: 0;
+}
+.input-group-addon {
+	border-radius: 0;
+	border: 0;
+}
+.btn {
+	border-radius: 0;
+}
+/* Body Classes */
+/* .home {
+	background: #f0f0f0;
+	background-size: cover;
+}
+.home #main-header, .home #main-header .navbar-left,
+.home #main-header .navbar-right,.home #main-header .main-nav a,
+.home #main-footer, .home #what-we-do .what-we-do-item {
+	border-color: rgba(255,255,255,0.2);
+}
+.home #main-header .main-nav a, .home #main-masthead .masthead-title, 
+.home #main-footer {
+	color: rgba(255,255,255,0.8);
+}
+.home #main-header .main-nav a:hover {
+	color: #fff;
+} */
+/* End of body class */
+#main-header {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid #f0f0f0;
+	padding: 15px 0;
+}
+#main-header .navbar-brand {
+	color: #fb503b;
+	font-size: 14px;
+	padding-left: 0;
+}
+#main-header .navbar-left, #main-header .navbar-right {
+	border-left: 1px solid #f0f0f0;
+}
+#main-header .main-nav a {
+	font-family: 'Tharlon';
+	font-size: 12px;
+	color: #999;
+}
+#main-header .main-nav a:hover {
+	color: #666;
+}
+#main-header .user-nav a {
+	border: 2px solid #f0f0f0;
+	padding: 3px 10px;
+	margin: 10px 0 10px 10px;
+}
+#main-header .dropdown-menu {
+	box-shadow: none;
+}
+#main-header .dropdown-menu li {
+	padding: 10px;
+	width: 300px;
+}
+#main-masthead .masthead-title {
+	text-align: center;
+	color: #A4A4A4;
+	font-size: 60px;
+  	font-weight: 400;
+	margin: 100px 0 20px;
+}
+#main-masthead .masthead-flag {
+	border-top: 3px solid #FFDC00;
+	background: #2ECC40;
+	border-bottom: 3px solid #FF4136;
+	display: block;
+	width: 30px;
+	height: 9px;
+	margin: 0 auto;
+}
+.main-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.parent-page-title {
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 25px;
+	color: #999;
+}
+.page-title {
+	font-size: 28px;
+}
+.main-sidebar {
+	border-left: 1px solid #f0f0f0;
+}
+.documentation-content h1, .documentation-content h2, .documentation-content h3 {
+	margin-bottom: 20px;
+}
+.documentation-content p {
+	line-height: 34px;
+	margin-bottom: 26px;
+}
+.main-sidebar ul {
+	padding: 0;
+	list-style: none;
+}
+.main-sidebar ul li {
+	line-height: 28px;
+	position: relative;
+}
+.main-sidebar .sub-page li {
+	margin: 2px 0;
+}
+.main-sidebar .sub-page li a {
+	border-bottom: 1px solid #f0f0f0;
+	display: block;
+	padding: 0 5px;
+}
+.documentation-sidebar ul li:before {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	height: 3px;
+	width: 30px;
+	background: #50a5fb;
+	content: ' ';
+}
+.documentation-sidebar ul li ul li:before {
+	background: transparent;
+}
+.documentation-sidebar ul li ul {
+	margin: 10px 0;
+}
+.login-shortcut {
+	margin-top: 10px;
+}
+.profile-content .main-sidebar {
+	border-left: 0;
+	border-right: 1px solid #f0f0f0;
+}
+.profile-gravatar {
+	border: 1px solid #f0f0f0;
+	padding: 5px;
+	margin: 10px 0;
+}
+.freelance-yes {
+	color: #2ECC40;
+	font-size: 12px;
+}
+.profile-card {
+	border: 1px solid #f0f0f0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 109px;
+	width: 48%;
+	float: left;
+	margin: 1%;
+	padding: 1%;
+	box-sizing: border-box;
+	moz-box-sizing: border-box;
+}
+.profile-card:hover {
+	border: 1px solid #A4A4A4;
+}
+.profile-card a {
+	color: #333;
+}
+.profile-card .profile-avatar {
+	width: 30%;
+	float: left;
+}
+.profile-card .profile-info {
+	padding-left: 10px;
+	width: 70%;
+	float: left;
+}
+#what-we-do {
+	margin-top: 80px;
+	text-align: center;
+}
+#what-we-do .what-we-do-item {
+	border-right: 1px solid #f0f0f0;
+	height: 200px;
+}
+#what-we-do .what-we-do-item:last-child {
+	border-right: 0;
+}
+#what-we-do .app-heading {
+	color: #50a5fb;
+}
+#what-we-do p {
+	color: #999;
+	margin: 25px 0;
+}
+.app-heading {
+	position: relative;
+	font-size: 14px;
+}
+.app-heading:after {
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	margin-left: -15px;
+	height: 3px;
+	width: 30px;
+	background: #50a5fb;
+	content: ' ';
+}
+#main-footer {
+	color: #999;
+	text-align: center;
+	font-size: 12px;
+	border-top: 1px solid #f0f0f0;
+	clear: both;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
