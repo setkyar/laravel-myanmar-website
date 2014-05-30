@@ -6,6 +6,13 @@
       <h1>မှတ်ပုံတင်ရန်</h1>
     </div>
     <div class="main-content col-lg-9">
+    @if($errors->has())
+      @foreach ($errors->all() as $error)
+        <div class="alert alert-danger">
+          {{ $error }}
+        </div>
+      @endforeach
+    @endif
       {{ Form::model(null, array('action' => array('UserController@postRegister'))) }}
         <div class="form-group">
           {{ Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'အီးမေးလ်')) }}

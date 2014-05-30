@@ -31,6 +31,9 @@ img {
 .btn {
 	border-radius: 0;
 }
+.alert {
+	border-radius: 0;
+}
 /* Body Classes */
 /* .home {
 	background: #f0f0f0;
