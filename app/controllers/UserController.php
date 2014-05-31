@@ -1,20 +1,26 @@
 <?php
 
 use LM\Interfaces\UserRepositoryInterface;
-use LM\Services\Validations\UserValidator;
+use LM\Services\Validations\Users\UserRegisterValidator;
+use LM\Services\Validations\Users\UserLoginValidator;
 
 class UserController extends BaseController {
 
 	protected $users;
-	protected $validator;
+	protected $registerValidator;
+	protected $loginValidator;
 
 	/**
 	* Create a new UserController instance.
 	*/
-    public function __construct(UserRepositoryInterface $users, UserValidator $validator)
+    public function __construct(
+    	UserRepositoryInterface $users, 
+    	UserRegisterValidator $registerValidator,
+    	UserLoginValidator $loginValidator)
     {
         $this->users  = $users;
-        $this->validator  = $validator;
+        $this->registerValidator  = $registerValidator;
+        $this->loginValidator  = $loginValidator;
     }
 
 	/**
@@ -25,6 +31,26 @@ class UserController extends BaseController {
 
 	public function getRegister() {
 		return View::make('users.register');
+	}
+
+	/**
+	 * Show Login Form
+	 *
+	 * @return View
+	 */
+	public function getLogin() {
+		return View::make('users.login');
+	}
+
+	/**
+	 * Show Login Form
+	 *
+	 * @return View
+	 */
+	public function getLogout() {
+		Auth::logout();
+		return \Redirect::to('/')
+						->with('success', 'ထွက်သွားရက်တယ်ဗျာ ၊ မျက်ရည်တောင်ဝဲတယ်');
 	}
 
 	/**
@@ -42,12 +68,44 @@ class UserController extends BaseController {
 			'profile_url' => Input::get('profile_url'),
 		);
 
-		if ($this->validator->with($data)->passes()) {
+		if ($this->registerValidator->with($data)->passes()) {
+
 			$user = $this->users->create($data);
-			return \Redirect::to($article->id);
+			return \Redirect::to('/')
+							->with('success', 'အသင်းဝင်ဖြစ်သွားပြီဖြစ်လို့ ၊ ဂျွမ်းနှစ်ပတ်လောက် ပစ်ထိုးလိုက်လို့ရပါပြီ');
 		} else {
 			return \Redirect::action('UserController@getRegister')
-							->with('errors', $this->validator->errors());
+							->withInput()
+							->with('errors', $this->registerValidator->errors());
+		}
+	}
+
+	/**
+	 * Login a user and do something
+	 *
+	 * @return Redirect
+	 */
+
+	public function postLogin() {
+		$data = array(
+			'email' => Input::get('email'),
+			'password' => Input::get('password'),
+		);
+
+		if ($this->loginValidator->with($data)->passes()) {
+			if (Auth::attempt($data))
+			{
+			    return \Redirect::to('/')
+			    				->with('success', 'အောင်မြင်စွာ ဝင်ရောက်နိုင်ခဲ့ပါပြီ');
+			} else {
+				return \Redirect::action('UserController@getLogin')
+								->withInput()
+								->with('error', 'အီးမေလ် (သို့) စကားဝှက်မှားနေပါတယ်');
+			}
+		} else {
+			return \Redirect::action('UserController@getLogin')
+							->withInput()
+							->with('errors', $this->loginValidator->errors());
 		}
 	}
 

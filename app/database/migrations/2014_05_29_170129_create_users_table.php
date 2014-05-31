@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration {
 		    $table->string('email', 35);
 		    $table->string('username', 35);
 		    $table->string('profile_url', 10);
-		    $table->string('password', 32);
+		    $table->string('password', 64);
 		    $table->smallInteger('active');
 		    $table->text('bio');
 		    $table->string('remember_token', 100)->nullable();
@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::table('users', function($table)
 		{
-    		$table->dropColumn('votes');
+    		$table->dropIfExists('users');
 		});
 	}
 

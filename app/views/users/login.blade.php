@@ -6,14 +6,7 @@
       <h1>မှတ်ပုံတင်ရန်</h1>
     </div>
     <div class="main-content col-lg-9">
-    @if($errors->has())
-      @foreach ($errors->all() as $error)
-        <div class="alert alert-danger">
-          {{ $error }}
-        </div>
-      @endforeach
-    @endif
-    @include('users.forms.register-form')
+    @include('users.forms.login-form')
     </div>
     <div class="main-sidebar col-lg-3">
       <ul class="sub-page">

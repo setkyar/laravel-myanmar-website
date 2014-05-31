@@ -13,27 +13,7 @@
         <h4 class="modal-title" id="myModalLabel">မှတ်ပုံတင်ရန်</h4>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder="အီးမေးလ်" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="နာမည်" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="စကားဝှက်" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="စကားဝှက်ပြန်ရိုက်ပါ" class="form-control">
-          </div>
-          <div class="form-group input-group">
-            <span class="input-group-addon">laravelmyanmar.com/profile/</span>
-            <input type="text" placeholder="URL လိပ်စာ (အင်္ဂလိပ်လို)" class="form-control">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">မှတ်ပုံတင်ရန်</button>
+        @include('users.forms.register-form')
       </div>
     </div>
   </div>
@@ -48,17 +28,7 @@
         <h4 class="modal-title" id="myModalLabel">ဝင်ရန်</h4>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder="အီးမေးလ်" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="စကားဝှက်" class="form-control">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">ဝင်ရန်</button>
+        @include('users.forms.login-form')
       </div>
     </div>
   </div>

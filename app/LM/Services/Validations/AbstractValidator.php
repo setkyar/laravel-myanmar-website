@@ -2,6 +2,11 @@
 
 namespace LM\Services\Validations;
 
+/**
+ * Abstract class for Validator
+ * @author Hein Zaw Htet
+ */
+
 use LM\Interfaces\Validations\ValidationInterface;
 use \Illuminate\Validation\Factory;
 
@@ -23,10 +28,14 @@ abstract class AbstractValidator implements ValidationInterface {
 	}
 
 	public function passes(){
-		$test = $this->validator->make($this->data,$this->rules);
+		$validator = $this->validator->make(
+			$this->data,
+			$this->rules,
+			$this->messages
+		);
 
-		if ($test->fails()) {
-			$this->errors = $test->messages();
+		if ($validator->fails()) {
+			$this->errors = $validator->messages();
 			return false;
 		};
 		return true;

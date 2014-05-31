@@ -11,16 +11,31 @@
 |
 */
 
-Route::get('/', function()
+// Pages
+Route::get('/', array('as' => 'homePage', function()
 {
-	return View::make('pages.home')
+    return View::make('pages.home')
 				->with('bodyClass', 'home');
-});
+}));
 
+Route::get('/about', array('as' => 'aboutPage', function()
+{
+    return View::make('pages.about')
+				->with('bodyClass', 'about');
+}));
+
+// Controllers
+Route::controller('/docs/{topic?}', 'DocController');
 Route::controller('/user', 'UserController');
 
 
+// Bind Interfaces to repository
 App::bind(
 	'LM\Interfaces\UserRepositoryInterface',  
 	'LM\Repositories\UserRepository'
+);
+
+App::bind(
+	'LM\Interfaces\DocRepositoryInterface',  
+	'LM\Repositories\DocRepository'
 );

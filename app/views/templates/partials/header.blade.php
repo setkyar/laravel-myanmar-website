@@ -28,17 +28,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">laravelmyanmar.com</a>
+          <a class="navbar-brand" href="{{ url() }}">laravelmyanmar.com</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <nav class="main-nav collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="index.html" class="active">မူလစာမျက်နှာ</a></li>
-            <li><a href="docs.html">အသုံးပြုနည်းများ</a></li>
-            <li><a href="forum.html">ဖိုရမ်</a></li>
-            <li><a href="members.html">အသင်းဝင်များ</a></li>
-            <li><a href="about.html">ကျွနု်ပ်တို့အကြောင်း</a></li>
+            <li><a href="{{ url() }}" class="active">မူလစာမျက်နှာ</a></li>
+            <li><a href="{{ url('docs') }}">အသုံးပြုနည်းများ</a></li>
+            <li><a href="{{ url('forum') }}">ဖိုရမ်</a></li>
+            <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li>
+            <li><a href="{{ url('about') }}">ကျွနု်ပ်တို့အကြောင်း</a></li>
           </ul>
           <ul class="user-nav nav navbar-nav navbar-right">
             <li>
@@ -50,3 +50,18 @@
           </ul>
         </nav>
     </header>
+    @if (Session::has('error'))
+        <div class="main-flash-message">
+          <div class="alert alert-danger">
+            {{ Session::get('error') }}
+          </div>
+        </div>
+    @endif
+
+    @if (Session::has('success'))
+        <div class="main-flash-message">
+          <div class="alert alert-success">
+            {{ Session::get('success') }}
+          </div>
+        </div>
+    @endif
