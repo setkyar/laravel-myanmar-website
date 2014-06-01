@@ -21,17 +21,14 @@ class DocController extends BaseController {
 	 */
 
 	public function getIndex($topic = null) {
+		
+		// Set default page
+		if ($topic === null) $topic = 'introduction';
 
 		// Get Contents
-		$getToc = $this->doc->getToc('documentation.md');
+		$content = $this->doc->getContent($topic .'.md');
+		$toc = $this->doc->getToc('documentation.md');
 
-		if ($topic === null) $topic = 'introduction'; // Set default page
-
-		$getContent = $this->doc->getContent($topic .'.md');
-
-		// Converted to HTML
-		$toc = Markdown::text($getToc);
-		$content = Markdown::text($getContent);
 
 		return View::make('docs.index')
 					->with('toc', $toc)

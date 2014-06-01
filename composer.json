@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"erusev/parsedown": "dev-master"
+		"erusev/parsedown": "dev-master",
+		"thomaswelton/laravel-gravatar": "0.0.x"
 	},
 	"autoload": {
 		"classmap": [

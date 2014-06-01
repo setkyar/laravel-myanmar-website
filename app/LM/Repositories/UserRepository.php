@@ -7,6 +7,7 @@ use LM\Interfaces\UserRepositoryInterface;
 
 class UserRepository extends AbstractRepository implements UserRepositoryInterface
 {
+    protected $model;
     /**
      * Create a new instance.
      *
@@ -18,15 +19,8 @@ class UserRepository extends AbstractRepository implements UserRepositoryInterfa
         $this->model = $user;
     }
 
-    /**
-     * Find all users
-     *
-     * @param  int  $perPage
-     * @return LM\Models\User
-     */
-    public function findAll($perPage = 200)
+    public function findByProfileUrl($profile_url)
     {
-        return $this->model->orderBy('created_at', 'desc')
-                            ->paginate($perPage);
+        return $this->model->where('profile_url', '=', $profile_url)->first();
     }
 }

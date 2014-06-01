@@ -17,10 +17,12 @@ class CreateUsersTable extends Migration {
 		    $table->increments('id');
 		    $table->string('email', 35);
 		    $table->string('username', 35);
-		    $table->string('profile_url', 10);
+		    $table->string('profile_url', 20);
 		    $table->string('password', 64);
 		    $table->smallInteger('active');
-		    $table->text('bio');
+		    $table->string('job_position', 25)->nullable();
+		    $table->string('job_at', 25)->nullable();
+		    $table->text('bio')->nullable();
 		    $table->string('remember_token', 100)->nullable();
 		    $table->timestamps();
 		});

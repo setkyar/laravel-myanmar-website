@@ -14,4 +14,6 @@ interface UserRepositoryInterface
      * @return LM\User
      */
     public function create(array $data);
+
+    public function findByProfileUrl($profile_url);
 }

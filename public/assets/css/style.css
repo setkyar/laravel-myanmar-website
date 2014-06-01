@@ -78,17 +78,13 @@ img {
 #main-header .main-nav a:hover {
 	color: #666;
 }
-#main-header .user-nav a {
+#main-header .user-nav > a {
 	border: 2px solid #f0f0f0;
 	padding: 3px 10px;
 	margin: 10px 0 10px 10px;
 }
 #main-header .dropdown-menu {
 	box-shadow: none;
-}
-#main-header .dropdown-menu li {
-	padding: 10px;
-	width: 300px;
 }
 .main-flash-message {
 	width: 80%;

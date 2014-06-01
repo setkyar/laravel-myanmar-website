@@ -12,21 +12,30 @@
 */
 
 // Pages
-Route::get('/', array('as' => 'homePage', function()
+Route::get('/', function()
+{
+	return View::make('hello');
+});
+Route::get('/home', array('as' => 'homePage', function()
 {
     return View::make('pages.home')
 				->with('bodyClass', 'home');
 }));
-
 Route::get('/about', array('as' => 'aboutPage', function()
 {
     return View::make('pages.about')
 				->with('bodyClass', 'about');
 }));
+Route::get('/forum', array('as' => 'forumPage', function()
+{
+    return View::make('pages.coming-soon-feature');
+}));
 
 // Controllers
 Route::controller('/docs/{topic?}', 'DocController');
 Route::controller('/user', 'UserController');
+Route::get('/members', array('as' => 'membersList', 'uses' => 'UserController@getIndex'));
+Route::get('/profile/{profile_url?}', array('as' => 'profile', 'uses' => 'UserController@getProfile'));
 
 
 // Bind Interfaces to repository
@@ -39,3 +48,10 @@ App::bind(
 	'LM\Interfaces\DocRepositoryInterface',  
 	'LM\Repositories\DocRepository'
 );
+
+// App::bind('CacheManager', function() { 
+// 	return new Illuminate\Cache\CacheManager; 
+// });
+// App::bind('LM\Interfaces\CacheInterface', function() { 
+// 	return new LM\Services\CacheService; 
+// });

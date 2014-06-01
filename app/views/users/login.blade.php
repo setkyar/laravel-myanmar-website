@@ -10,8 +10,8 @@
     </div>
     <div class="main-sidebar col-lg-3">
       <ul class="sub-page">
-        <li><a href="login.html">ဝင်ရန်</a></li>
-        <li><a href="register.html">မှတ်ပုံတင်ရန်</a></li>
+        <li><a href="{{ action('UserController@getLogin') }}" class="active">ဝင်ရန်</a></li>
+        <li><a href="{{ action('UserController@getRegister') }}">မှတ်ပုံတင်ရန်</a></li>
       </ul>
     </div>
   </section>

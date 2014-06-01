@@ -4,36 +4,38 @@
     </footer>
   </div>
 
-<!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">မှတ်ပုံတင်ရန်</h4>
-      </div>
-      <div class="modal-body">
-        @include('users.forms.register-form')
+@unless (Auth::check())
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">မှတ်ပုံတင်ရန်</h4>
+          </div>
+          <div class="modal-body">
+            @include('users.forms.register-form')
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">ဝင်ရန်</h4>
-      </div>
-      <div class="modal-body">
-        @include('users.forms.login-form')
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">ဝင်ရန်</h4>
+          </div>
+          <div class="modal-body">
+            @include('users.forms.login-form')
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-    <script src="http://localhost/jquery.js"></script>
+@endunless
+    <script src="{{ asset('assets/js/jquery-2.1.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
   </body>
 </html>

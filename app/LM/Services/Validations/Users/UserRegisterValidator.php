@@ -9,6 +9,7 @@ class UserRegisterValidator extends AbstractValidator {
 		'email' => 'required|email|unique:users',
 		'username' => 'required',
 		'password' => 'required|min:6',
+		// 'confirm-password' => 'required|confirmed:password',
 		'profile_url' => 'required|unique:users',
 	);
 

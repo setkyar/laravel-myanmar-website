@@ -41,12 +41,23 @@
             <li><a href="{{ url('about') }}">ကျွနု်ပ်တို့အကြောင်း</a></li>
           </ul>
           <ul class="user-nav nav navbar-nav navbar-right">
+          @if(Auth::check())
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ action('UserController@getProfile') }}">Profile ကြည့်ရန်</a></li>
+                <li><a href="{{ action('UserController@getEdit') }}">Profile ပြင်ရန်</a></li>
+                <li><a href="{{ action('UserController@getLogout') }}">ထွက်ရန်</a></li>
+              </ul>
+            </li>
+          @else
             <li>
               <a href="#" data-toggle="modal" data-target="#registerModal">မှတ်ပုံတင်ရန်</a>
             </li>
             <li>
               <a href="#" data-toggle="modal" data-target="#loginModal">ဝင်ရန်</a>
             </li>
+          @endif
           </ul>
         </nav>
     </header>

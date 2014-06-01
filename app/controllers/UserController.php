@@ -3,12 +3,14 @@
 use LM\Interfaces\UserRepositoryInterface;
 use LM\Services\Validations\Users\UserRegisterValidator;
 use LM\Services\Validations\Users\UserLoginValidator;
+use LM\Services\Validations\Users\ProfileEditValidator;
 
 class UserController extends BaseController {
 
 	protected $users;
 	protected $registerValidator;
 	protected $loginValidator;
+	protected $profileValidator;
 
 	/**
 	* Create a new UserController instance.
@@ -16,11 +18,52 @@ class UserController extends BaseController {
     public function __construct(
     	UserRepositoryInterface $users, 
     	UserRegisterValidator $registerValidator,
-    	UserLoginValidator $loginValidator)
+    	UserLoginValidator $loginValidator,
+    	ProfileEditValidator $profileValidator)
     {
         $this->users  = $users;
         $this->registerValidator  = $registerValidator;
         $this->loginValidator  = $loginValidator;
+        $this->profileValidator  = $profileValidator;
+    }
+
+    /**
+	 * Display all members
+	 *
+	 * @return View
+	 */
+    public function getIndex()
+    {
+    	$users = $this->users->findAll();
+    	return View::make('users.index')
+    				->with('users', $users);
+    }
+
+    /**
+	 * Display profile
+	 *
+	 * @return View
+	 */
+    public function getProfile($profile_url = null)
+    {
+    	if ($profile_url === null) {
+    		$profile_url = Auth::user()->profile_url;
+    	}
+    	$user = $this->users->findByProfileUrl($profile_url);
+    	return View::make('users.profile')
+    				->with('user', $user);
+    }
+
+    /**
+	 * Profile Edit form
+	 *
+	 * @return View
+	 */
+    public function getEdit()
+    {
+    	$user = $this->users->findById(Auth::user()->id);
+    	return View::make('users.edit')
+    				->with('user', $user);
     }
 
 	/**
@@ -106,6 +149,35 @@ class UserController extends BaseController {
 			return \Redirect::action('UserController@getLogin')
 							->withInput()
 							->with('errors', $this->loginValidator->errors());
+		}
+	}
+
+
+	/**
+	 * Edit a user and do something
+	 *
+	 * @return Redirect
+	 */
+
+	public function postEdit() {
+
+		$data = array(
+			'username' => Input::get('username'),
+			'password' => Hash::make(Input::get('password')),
+			'job_position' => Input::get('job_position'),
+			'job_at' => Input::get('job_at'),
+			'bio' => Input::get('bio'),
+		);
+
+		if ($this->profileValidator->with($data)->passes()) {
+
+			$user = $this->users->update($data, Auth::user()->id);
+			return \Redirect::to('/profile')
+							->with('success', 'အချက်အလက်တွေ ပြင်ပြီးပါပြီ');
+		} else {
+			return \Redirect::action('UserController@getEdit')
+							->withInput()
+							->with('errors', $this->profileValidator->errors());
 		}
 	}
 
