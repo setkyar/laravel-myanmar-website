@@ -48,10 +48,3 @@ App::bind(
 	'LM\Interfaces\DocRepositoryInterface',  
 	'LM\Repositories\DocRepository'
 );
-
-// App::bind('CacheManager', function() { 
-// 	return new Illuminate\Cache\CacheManager; 
-// });
-// App::bind('LM\Interfaces\CacheInterface', function() { 
-// 	return new LM\Services\CacheService; 
-// });

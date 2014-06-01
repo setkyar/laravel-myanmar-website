@@ -24,10 +24,15 @@ class DocController extends BaseController {
 		
 		// Set default page
 		if ($topic === null) $topic = 'introduction';
+		
 
-		// Get Contents
-		$content = $this->doc->getContent($topic .'.md');
-		$toc = $this->doc->getToc('documentation.md');
+		if (file_exists(base_path('docs/' . $topic. '.md'))) {
+			// Get Contents
+			$content = $this->doc->getContent($topic .'.md');
+			$toc = $this->doc->getToc('documentation.md');
+		} else {
+			App::abort(404);
+		}
 
 
 		return View::make('docs.index')

@@ -18,7 +18,7 @@
   </div>
   <div class="main-sidebar col-lg-3">
   <div class="profile-gravatar">
-    <img src="assets/img/1535734_10200320194646041_737002202_n.jpg">
+    <img src="{{ "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user->email ) ) ) . "?s=" . 200 }}">
   </div>
     <ul class="sub-page">
       <li><a href="{{ action('UserController@getProfile') }}" class="active">Profile ကြည့်ရန်</a></li>

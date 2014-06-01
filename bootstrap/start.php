@@ -69,4 +69,10 @@ require $framework.'/Illuminate/Foundation/start.php';
 |
 */
 
+
+App::missing(function($exception)
+{
+    return Response::view('errors.404', array(), 404);
+});
+
 return $app;

@@ -11,7 +11,7 @@
       <div class="profile-card">
         <a href="{{ action('UserController@getProfile', array($user->profile_url)) }}">
           <div class="profile-avatar">
-            <img src="assets/img/1535734_10200320194646041_737002202_n.jpg">
+            <img src="{{ "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user->email ) ) ) . "?s=" . 95 }}">
           </div>
           <div class="profile-info">
             <h3 class="profile-name">{{ $user->username }}</h3>
