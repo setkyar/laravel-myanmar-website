@@ -26,11 +26,7 @@ Route::get('/about', array('as' => 'aboutPage', function()
     return View::make('pages.about')
 				->with('bodyClass', 'about');
 }));
-Route::get('/forum', array('as' => 'forumPage', function()
-{
-    return View::make('pages.coming-soon-feature');
-}));
-
+Route::controller('/forum', 'ForumController');
 // Controllers
 Route::controller('/docs/{topic?}', 'DocController');
 Route::controller('/user', 'UserController');
@@ -47,4 +43,9 @@ App::bind(
 App::bind(
 	'LM\Interfaces\DocRepositoryInterface',  
 	'LM\Repositories\DocRepository'
+);
+
+App::bind(
+	'LM\Interfaces\ForumRepositoryInterface',  
+	'LM\Repositories\ForumRepository'
 );
