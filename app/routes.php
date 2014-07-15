@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,6 +11,9 @@
 */
 
 // Pages
+
+
+
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -26,13 +28,20 @@ Route::get('/about', array('as' => 'aboutPage', function()
     return View::make('pages.about')
 				->with('bodyClass', 'about');
 }));
-Route::controller('/forum', 'ForumController');
+
+// Blog
+Route::get('/blog/{slug}', array('uses' => 'BlogController@getSingle', 'as' => 'blogSingle'));
+Route::controller('/blog', 'BlogController');
+
 // Controllers
 Route::controller('/docs/{topic?}', 'DocController');
 Route::controller('/user', 'UserController');
 Route::get('/members', array('as' => 'membersList', 'uses' => 'UserController@getIndex'));
 Route::get('/profile/{profile_url?}', array('as' => 'profile', 'uses' => 'UserController@getProfile'));
 
+
+
+// array('as' => 'blogSingle', 'uses' => 'BlogController@getSingle')
 
 // Bind Interfaces to repository
 App::bind(
@@ -46,6 +55,6 @@ App::bind(
 );
 
 App::bind(
-	'LM\Interfaces\ForumRepositoryInterface',  
-	'LM\Repositories\ForumRepository'
+	'LM\Interfaces\BlogRepositoryInterface',  
+	'LM\Repositories\BlogRepository'
 );
