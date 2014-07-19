@@ -1,14 +1,9 @@
 @font-face {
-  font-family: 'Noto Sans Myanmar';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Noto Sans Myanmar'), url('../fonts/NotoSansMyanmar-Regular.ttf') format('ttf');
-}
-@font-face {
-  font-family: 'Noto Sans Myanmar Bold';
-  font-style: bold;
-  font-weight: 400;
-  src: local('Noto Sans Myanmar Bold'), url('../fonts/NotoSansMyanmar-Bold.ttf') format('ttf');
+	font-family: 'NotoSansMyanmar';
+	src: url('../fonts/NotoSansMyanmar.eot?') format('eot'), 
+	     url('../fonts/NotoSansMyanmar.woff') format('woff'), 
+	     url('../fonts/NotoSansMyanmar.ttf')  format('truetype'),
+	     url('../fonts/NotoSansMyanmar.svg#NotoSansMyanmar') format('svg');
 }
 body {
 	font-family: 'Noto Sans Myanmar';
