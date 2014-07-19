@@ -31,12 +31,16 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
      **/
     public function getActiveBlogs($perPage = 8)
     {
-        return $this->model->with(array(
-                            'user' => function($q) { $q->remember(10080); }, 
-                            'categories' => function($q) { $q->remember(10080); }
-                            ))
-                            ->remember(10080)
-                            ->where('status', 'active')
+        // return $this->model->with(array(
+        //                         'user' => function($q) { $q->remember(10080); }, 
+        //                         'categories' => function($q) { $q->remember(10080); }
+        //                     ))
+        //                     ->remember(10080)
+        //                     ->where('status', 'active')
+        //                     ->orderBy('created_at', 'desc')
+        //                     ->paginate($perPage);
+
+        return $this->model->where('status', 'active')
                             ->orderBy('created_at', 'desc')
                             ->paginate($perPage);
                             
