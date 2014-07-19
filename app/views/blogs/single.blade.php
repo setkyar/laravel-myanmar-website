@@ -4,32 +4,34 @@
 
 <section id="main-body" class="row">
   <div class="parent-page-title col-lg-12">
-    <h1>ဘလော့ဂ်</h1>
+    <h1>{{ $blog->title }}</h1>
+    <h4 class="blog-meta"><i class="glyphicon glyphicon-user"></i> <a href="{{ route('profile', array($blog->user['profile_url'])) }}">{{ $blog->user->username }}</a> <i class="glyphicon glyphicon-calendar"></i> {{ $blog->created_at->format('d F Y') }} </h4>
   </div>
   <div class="main-content col-lg-9">
   	<article class="blog-wrap">
-  		<p class="blog-date">{{ $blog->created_at->format('d F Y') }}</p>
-		  <h1 class="blog-title"><a href="{{ route('blogSingle', array($blog->slug) ); }}">{{ $blog->title }}</a></h1>
-		  <h4 class="blog-author">by <a href="#">Hein Zaw Htet</a></h4>
 		  <div class="blog-content">
 		  	{{ $blog->content }}
 		  </div>
+      <hr>
+      <div class="blog-comment">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'laravelmyanmar'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+              </div>
     </article>
   </div>
-  <div class="main-sidebar col-lg-3">
-  	<h6 class="sidebar-title">Categories</h6>
-    <ul class="sub-page">
-    	<li><a href="#">Announcement</a></li>
-    	<li><a href="#">Tutorials</a></li>
-    	<li><a href="#">Reviews</a></li>
-    	<li><a href="#">News</a></li>
-    </ul>
-    <h6 class="sidebar-title">Versions</h6>
-    <ul class="sub-page">
-    	<li><a href="#">4</a></li>
-    	<li><a href="#">3</a></li>
-    </ul>
-  </div>
+  @include('templates.sidebar.blog')
 </section>
 
 @stop

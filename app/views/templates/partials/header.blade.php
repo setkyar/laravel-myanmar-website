@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel Myanmar</title>
-
-    <!-- Bootstrap -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    @if(Auth::check())
+      <style type="text/css">
+        body {
+          padding-top: 50px;
+        }
+      </style>
+    @endif
+    @yield('header')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,30 +39,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <nav class="main-nav collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="{{ url() }}" class="active">မူလစာမျက်နှာ</a></li>
             <li><a href="{{ url('docs') }}">အသုံးပြုနည်းများ</a></li>
-            <li><a href="{{ url('forum') }}">ဖိုရမ်</a></li>
-            <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li>
+            <li><a href="{{ url('blog') }}">ဘလော့ဂ်</a></li>
+            <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">ဆွေးနွေးရန်</a></li>
+            <!-- <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li> -->
             <li><a href="{{ url('about') }}">ကျွနု်ပ်တို့အကြောင်း</a></li>
-          </ul>
-          <ul class="user-nav nav navbar-nav navbar-right">
-          @if(Auth::check())
-            <li>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }} <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="{{ action('UserController@getProfile') }}">Profile ကြည့်ရန်</a></li>
-                <li><a href="{{ action('UserController@getEdit') }}">Profile ပြင်ရန်</a></li>
-                <li><a href="{{ action('UserController@getLogout') }}">ထွက်ရန်</a></li>
-              </ul>
-            </li>
-          @else
-            <li>
-              <a href="#" data-toggle="modal" data-target="#registerModal">မှတ်ပုံတင်ရန်</a>
-            </li>
-            <li>
-              <a href="#" data-toggle="modal" data-target="#loginModal">ဝင်ရန်</a>
-            </li>
-          @endif
           </ul>
         </nav>
     </header>

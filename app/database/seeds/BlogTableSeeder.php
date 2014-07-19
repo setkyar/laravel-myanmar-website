@@ -14,7 +14,7 @@ class BlogTableSeeder extends Seeder {
         		'content' => 'Laravel ကိုသုံးပြီးတော့ ပေါ့ပေါ့ပါးပါး Todo List လေးတစ်ခု အတူတူတည်ဆောက် ကြည့်ကြပါမယ်။',
         		'l_version' => '4.2 or Above',
         		'status' => 'active',
-        		'author_id' => '1'
+        		'user_id' => '1'
         	)
         );
 
@@ -26,7 +26,7 @@ class BlogTableSeeder extends Seeder {
         		'content' => 'Laravel ကိုသုံးပြီးတော့ ပေါ့ပေါ့ပါးပါး Todo List လေးတစ်ခု အတူတူတည်ဆောက် ကြည့်ကြပါမယ်။',
         		'l_version' => '4.2 or Above',
         		'status' => 'active',
-        		'author_id' => '2'
+        		'user_id' => '2'
         	)
         );
 
@@ -38,7 +38,7 @@ class BlogTableSeeder extends Seeder {
         		'content' => 'ကိုယ့် Application က Laravel မှာ ပါဝင်လာပြီးသားဖြစ်တဲ့ Authentication မှာပါတဲ့ Feature တွေနဲ့တင် မလုံလောက်ဘဲ ၊ User Role တွေ ၊ User Group တွေပါလာပြီဆိုရင်တော့ Sentry Package ကိုအသုံးပြုနိုင်ပါတယ်',
         		'l_version' => '4.2 or Above',
         		'status' => 'active',
-        		'author_id' => '1'
+        		'user_id' => '1'
         	)
         );
     }

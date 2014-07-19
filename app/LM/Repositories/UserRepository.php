@@ -23,4 +23,10 @@ class UserRepository extends AbstractRepository implements UserRepositoryInterfa
     {
         return $this->model->where('profile_url', '=', $profile_url)->first();
     }
+
+    public function blogs()
+    {
+        return $this->hasMany('LM\Models\Blog');
+    }
+
 }

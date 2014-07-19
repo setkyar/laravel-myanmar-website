@@ -17,7 +17,7 @@ abstract class AbstractRepository
      * @param  int  $perPage
      * @return LM\Models\User
      */
-    public function findAll($perPage = 200)
+    public function findAll($perPage = 10)
     {
         return $this->model->orderBy('created_at', 'desc')
                             ->paginate($perPage);
@@ -50,5 +50,16 @@ abstract class AbstractRepository
     	$model = $this->findById($id);
     	$model->fill($data);
     	return $model->save();
+    }
+
+    /**
+     * Deleting a modal by ID
+     *
+     * @author Hein Zaw Htet
+     **/
+    public function delete($id)
+    {
+        $model = $this->findById($id);
+        return $model->delete();
     }
 }

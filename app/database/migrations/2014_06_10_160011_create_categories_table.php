@@ -14,7 +14,7 @@ class CreateCategoriesTable extends Migration {
 	{
 		Schema::create('categories', function($table)
 		{
-		    $table->integer('id');
+		    $table->increments('id');
 		    $table->string('name');
 		    $table->text('description');
 		});

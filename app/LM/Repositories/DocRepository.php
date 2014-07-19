@@ -43,7 +43,7 @@ class DocRepository implements DocRepositoryInterface
         $getContent = $this->file->get(base_path('docs/' . $fileName));
         $doc = \Markdown::text($getContent);
         // Put it in cache
-        $this->cache->put($cacheKey, $doc, 10);
+        $this->cache->put($cacheKey, $doc, 10080);
         return $doc;
     }
 }

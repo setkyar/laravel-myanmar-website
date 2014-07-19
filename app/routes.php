@@ -10,10 +10,9 @@
 |
 */
 
+// TODO : Clean up and organize routes
+
 // Pages
-
-
-
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -29,9 +28,29 @@ Route::get('/about', array('as' => 'aboutPage', function()
 				->with('bodyClass', 'about');
 }));
 
+// File
+Route::controller('/file', 'FileController');
+
+
+Route::get('/blog/category/{name}', array('uses' => 'BlogController@getByCategory', 'as' => 'blogCategory'));
+Route::controller('/blog/category', 'CategoryController');
+
 // Blog
 Route::get('/blog/{slug}', array('uses' => 'BlogController@getSingle', 'as' => 'blogSingle'));
 Route::controller('/blog', 'BlogController');
+Route::get('/admin/blog/create', array('uses' => 'BlogController@getCreate', 'as' => 'blogCreate'));
+Route::get('/admin/blog', array('uses' => 'BlogController@getAdminIndex', 'as' => 'blogAdmin'));
+Route::get('/admin/blog/edit/{id}', array('uses' => 'BlogController@getEdit', 'as' => 'blogEdit'));
+Route::any('/admin/blog/delete/{id}', array('uses' => 'BlogController@anyDelete', 'as' => 'blogDelete'));
+
+
+// Blog Categories
+Route::get('/blog/category', array('uses' => 'CategoryController@getAdminIndex', 'as' => 'categoryAdminIndex'));
+
+
+Route::get('/admin/blog/category/create', array('uses' => 'CategoryController@getCreate', 'as' => 'categoryCreate'));
+
+Route::controller('/admin', 'AdminController');
 
 // Controllers
 Route::controller('/docs/{topic?}', 'DocController');
@@ -39,7 +58,9 @@ Route::controller('/user', 'UserController');
 Route::get('/members', array('as' => 'membersList', 'uses' => 'UserController@getIndex'));
 Route::get('/profile/{profile_url?}', array('as' => 'profile', 'uses' => 'UserController@getProfile'));
 
-
+Route::get('gio', function() {
+	Cache::forget('blogs');
+});
 
 // array('as' => 'blogSingle', 'uses' => 'BlogController@getSingle')
 
@@ -58,3 +79,17 @@ App::bind(
 	'LM\Interfaces\BlogRepositoryInterface',  
 	'LM\Repositories\BlogRepository'
 );
+
+App::bind(
+	'LM\Interfaces\CategoryRepositoryInterface',  
+	'LM\Repositories\CategoryRepository'
+);
+
+App::bind(
+	'LM\Interfaces\FileRepositoryInterface',
+	'LM\Repositories\FileRepository'
+);
+
+// View Composers
+
+View::composer('templates.sidebar.blog', 'LM\Composers\CategoryComposer');
