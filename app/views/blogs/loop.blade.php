@@ -12,5 +12,5 @@
 	  </article>
 	@endforeach
 @else
-	<h3>မည်သည့် ဘလော့ဂ်မှ မရှိသေးပါ ။<a href="{{ url('/admin/blog/create') }}"><i class="glyphicon glyphicon-plus"></i> ဒီကအေန တင္လို႔ရပါတယ္</a></h3>
+	<h3>မည်သည့် ဘလော့ဂ်မှ မရှိသေးပါ ။<a href="{{ url('/admin/blog/create') }}"><i class="glyphicon glyphicon-plus"></i> ဒီကအနေ တင်လို့ရပါတယ်</a></h3>
 @endif

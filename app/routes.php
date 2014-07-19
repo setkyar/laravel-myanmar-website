@@ -29,7 +29,7 @@ Route::controller('/file', 'FileController');
 
 
 Route::get('/blog/category/{name}', array('uses' => 'BlogController@getByCategory', 'as' => 'blogCategory'));
-Route::controller('/blog/category', 'CategoryController');
+Route::controller('admin/blog/category', 'CategoryController');
 
 // Blog
 Route::get('/blog/{slug}', array('uses' => 'BlogController@getSingle', 'as' => 'blogSingle'));
@@ -41,7 +41,7 @@ Route::any('/admin/blog/delete/{id}', array('uses' => 'BlogController@anyDelete'
 
 
 // Blog Categories
-Route::get('/blog/category', array('uses' => 'CategoryController@getAdminIndex', 'as' => 'categoryAdminIndex'));
+Route::get('admin/blog/category', array('uses' => 'CategoryController@getAdminIndex', 'as' => 'categoryAdminIndex'));
 
 
 Route::get('/admin/blog/category/create', array('uses' => 'CategoryController@getCreate', 'as' => 'categoryCreate'));

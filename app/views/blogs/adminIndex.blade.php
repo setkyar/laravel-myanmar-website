@@ -8,7 +8,7 @@
   </div>
   <div class="main-content col-lg-12">
   <div class="toolbar text-right">
-    <a href="{{ action('CategoryController@getCreate') }}" class="btn-primary btn"><i class="glyphicon glyphicon-plus"></i> Add New Blog</a>
+    <a href="{{ action('BlogController@getCreate') }}" class="btn-primary btn"><i class="glyphicon glyphicon-plus"></i> Add New Blog</a>
   </div>
     <table class="table table-responsive table-striped">
     @foreach ($blogs as $blog)

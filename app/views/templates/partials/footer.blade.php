@@ -20,6 +20,17 @@
               </li>
             </ul>
           </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="{{ url('/admin/blog/category') }}"><i class="glyphicon glyphicon-eye-open"></i> View All Categories</a>
+              </li>
+              <li>
+                <a href="{{ url('/admin/blog/category/create') }}"><i class="glyphicon glyphicon-plus"></i> Add New Category</a>
+              </li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
