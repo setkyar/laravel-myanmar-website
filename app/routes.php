@@ -13,11 +13,7 @@
 // TODO : Clean up and organize routes
 
 // Pages
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-Route::get('/home', array('as' => 'homePage', function()
+Route::get('/', array('as' => 'homePage', function()
 {
     return View::make('pages.home')
 				->with('bodyClass', 'home');

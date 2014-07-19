@@ -29,16 +29,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="ga-stats">
 		<h4>Stats</h4>
-		<div id='chart'>Loading...</div>
-	</div>
-	<div id='chart'></div>
-	<div class="admin-shortcuts">
-		<h4>Shortcuts</h4>
-		<a href="#" class="btn-primary btn-lg btn"><i class="glyphicon glyphicon-plus"></i> Add New Blog</a>
-		<a href="#" class="btn-info btn-lg btn"><i class="glyphicon glyphicon-eye-open"></i> View All Blogs</a>
-	</div>
+		<div id='chart'></div>
   </div>
 </section>
 
