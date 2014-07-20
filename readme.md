@@ -1,15 +1,15 @@
-## Website for Laravel
+﻿## Website for Laravel
 
-[Laravel Myanmar](http://laravelmyanmar.com) ရဲ႕ Source Code ေတြပါ။
-(ဒီ Readme File က ျပည့္စံုမႈမရွိေသးပါဘူး။ မၾကာခင္ Update လုပ္ပါမယ္)
+[Laravel Myanmar](http://laravelmyanmar.com) ရဲ့ Source Code တွေပါ။
+(ဒီ Readme File က ပြည့်စုံမှုမရှိသေးပါဘူး။ မကြာခင် Update လုပ်ပါမယ်)
 
 ### Features
-1. User Authentication (Register, Login ႏွင့္ တစ္ျခား Feature ေတြကို ျဖည္းျဖည္းခ်င္း ထပ္ျဖည့္ပါမယ္)
+1. User Authentication (Register, Login နှင့် တစ်ခြား Feature တွေကို ဖြည်းဖြည်းချင်း ထပ်ဖြည့်ပါမယ်)
 2. Documentation Reader
 3. Coming Soon...
 
 ### Requirements
-ဒီ Laravel Myanmar (Source Code) ေတြကို Run ဖို႔အတြက္ ေအာက္ကအတုိင္းလိုအပ္ပါတယ္။
+ဒီ Laravel Myanmar (Source Code) တွေကို Run ဖို့အတွက် အောက်ကအတိုင်းလိုအပ်ပါတယ်။
 
 - Composer
 - PHP >= 5.3.7
@@ -17,13 +17,13 @@
 
 ### Installation
 
-ဒီ Source ကို Git Clone လုပ္ၿပီး (သို႔မဟုတ္) Download လုပ္ၿပီး Terminal / CMD ကေန Project Folder ထဲသြားပါ။ လိုအပ္တဲ့ Package ေတြအတြက္ Composer Install ျပဳလုပ္ပါ။
+ဒီ Source ကို Git Clone လုပ်ပြီး (သို့မဟုတ်) Download လုပ်ပြီး Terminal / CMD ကနေ Project Folder ထဲသွားပါ။ လိုအပ်တဲ့ Package တွေအတွက် Composer Install ပြုလုပ်ပါ။
 
 `composer install`
 
-`app/config/database.php` ထဲမွာ ကိုယ့္ရဲ႕ Database information ေတြထည့္ပါ။
+`app/config/database.php` ထဲမှာ ကိုယ့်ရဲ့ Database information တွေထည့်ပါ။
 
-ၿပီးရင္ Database Migration လုပ္ရပါမယ္။
+ပြီးရင် Database Migration လုပ်ရပါမယ်။
 
 `php artisan migrate`
  
