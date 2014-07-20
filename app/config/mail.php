@@ -93,7 +93,8 @@ return array(
 	|
 	*/
 
-	'password' => getenv('SMTP_PASSWORD'),
+	// 'password' => getenv('SMTP_PASSWORD'),
+	'password' => 'hd0*d7a2',
 
 	/*
 	|--------------------------------------------------------------------------
