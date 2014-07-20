@@ -1,15 +1,18 @@
 @font-face {
-	font-family: 'NotoSansMyanmar';
-	src: url('../fonts/NotoSansMyanmar.eot?') format('eot'), 
-	     url('../fonts/NotoSansMyanmar.woff') format('woff'), 
-	     url('../fonts/NotoSansMyanmar.ttf')  format('truetype'),
-	     url('../fonts/NotoSansMyanmar.svg#NotoSansMyanmar') format('svg');
+    font-family: 'NotoSansMyanmarRegular';
+    src: url('../fonts/notosansmyanmar.eot');
+    src: url('../fonts/notosansmyanmar.eot') format('embedded-opentype'),
+         url('../fonts/notosansmyanmar.woff') format('woff'),
+         url('../fonts/notosansmyanmar.ttf') format('truetype'),
+         url('../fonts/notosansmyanmar.svg#NotoSansMyanmarRegular') format('svg');
 }
 body {
-	font-family: 'NotoSansMyanmar';
+	font-family: 'NotoSansMyanmarRegular' !important;
 	color: #444;
 }
-
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'NotoSansMyanmarRegular';
+}
 a {
 	color: #fb503b;
 }
