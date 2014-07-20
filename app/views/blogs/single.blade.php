@@ -10,7 +10,7 @@
   <div class="main-content col-lg-9">
   	<article class="blog-wrap">
 		  <div class="blog-content">
-		  	{{ $blog->content }}
+		  	 {{ Markdown::text($blog->content) }}
 		  </div>
       <hr>
       <div class="blog-comment">

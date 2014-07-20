@@ -22,6 +22,7 @@ class BlogController extends BaseController {
         		'postCreate',
         		'postEdit',
         		'anyDelete',
+        		'getAdminIndex'
         		)
         	));
     }
