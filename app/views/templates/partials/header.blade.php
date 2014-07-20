@@ -43,7 +43,7 @@
             <li><a href="{{ url('blog') }}">ဘလော့ဂ်</a></li>
             <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">ဆွေးနွေးရန်</a></li>
             <!-- <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li> -->
-            <li><a href="{{ url('about') }}">ကျွနု်ပ်တို့အကြောင်း</a></li>
+            <li><a href="{{ url('about') }}">ကျွန်ုပ်တို့အကြောင်း</a></li>
           </ul>
         </nav>
     </header>
