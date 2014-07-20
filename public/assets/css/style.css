@@ -75,7 +75,7 @@ img {
 #main-header .navbar-brand {
 	color: #fb503b;
 	font-size: 14px;
-	padding-left: 0;
+	padding: 5px;
 }
 #main-header .navbar-left, #main-header .navbar-right {
 	border-left: 1px solid #f0f0f0;
@@ -288,7 +288,7 @@ img {
 #what-we-do .what-we-do-item:last-child {
 	border-right: 0;
 }
-#what-we-do .app-heading {
+#what-we-do .app-heading a {
 	color: #50a5fb;
 }
 #what-we-do p {

@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ url() }}">laravelmyanmar.com</a>
+          <a class="navbar-brand" href="{{ url() }}"><img src="{{ asset('assets/img/lm-logo.png') }}"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

@@ -11,7 +11,7 @@
 */
 
 // TODO : Clean up and organize routes
-
+Route::controller('password', 'RemindersController');
 // Pages
 Route::get('/', array('as' => 'homePage', function()
 {
@@ -53,10 +53,6 @@ Route::controller('/docs/{topic?}', 'DocController');
 Route::controller('/user', 'UserController');
 Route::get('/members', array('as' => 'membersList', 'uses' => 'UserController@getIndex'));
 Route::get('/profile/{profile_url?}', array('as' => 'profile', 'uses' => 'UserController@getProfile'));
-
-Route::get('gio', function() {
-	Cache::forget('blogs');
-});
 
 // array('as' => 'blogSingle', 'uses' => 'BlogController@getSingle')
 

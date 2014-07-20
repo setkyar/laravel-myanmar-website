@@ -8,7 +8,7 @@
 	  <img href="{{ route('blogSingle', array($blog->slug) ); }}" src="{{ $blog->featured_img }}" alt="{{ $blog->title }}">
 	    </figure>
 		  <p class="blog-excerpt">{{ $blog->excerpt }}</p>
-		<a class="btn-primary btn">ဆက်လက်ဖတ်ရန်</a>
+		<a class="btn-primary btn" href="{{ route('blogSingle', array($blog->slug) ); }}">ဆက်လက်ဖတ်ရန်</a>
 	  </article>
 	@endforeach
 @else

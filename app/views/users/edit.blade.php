@@ -79,7 +79,7 @@
         @endforeach
       @endif
     </div>
-    <input type="submit" value="ဝင်ရန်" class="btn-primary btn-lg btn">
+    <input type="submit" value="Submit" class="btn-primary btn-lg btn">
   {{ Form::close() }}
   </div>
 </section>
