@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'info@laravelmyanmar.com', 'name' => 'Laravel Myanmar'),
 
 	/*
 	|--------------------------------------------------------------------------
