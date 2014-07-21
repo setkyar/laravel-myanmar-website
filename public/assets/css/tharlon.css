@@ -1,0 +1,16 @@
+/* 
+ * Tharlon (Burmese) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Tharlon';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/tharlon/v2/Tharlon-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/tharlon/v2/Tharlon-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/tharlon/v2/Tharlon-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/tharlon/v2/Tharlon-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/tharlon/v2/Tharlon-Regular.ttf) format('truetype');
+}
+body,h1,h2,h3,h4,h5,h6,p {
+	font-family: Tharlon;
+}
