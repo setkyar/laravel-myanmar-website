@@ -22,6 +22,8 @@ class DocController extends BaseController {
 
 	public function getIndex($topic = null) {
 		
+		$pageTitle = "Documenation";
+
 		// Set default page
 		if ($topic === null) $topic = 'introduction';
 		
@@ -29,6 +31,7 @@ class DocController extends BaseController {
 		if (file_exists(base_path('docs/' . $topic. '.md'))) {
 			// Get Contents
 			$content = $this->doc->getContent($topic .'.md');
+			$pageTitle = ucfirst($topic);
 			$toc = $this->doc->getToc('documentation.md');
 		} else {
 			App::abort(404);
@@ -37,7 +40,8 @@ class DocController extends BaseController {
 
 		return View::make('docs.index')
 					->with('toc', $toc)
-					->with('content', $content);
+					->with('content', $content)
+					->with('pageTitle', $pageTitle);
 	}
 
 }

@@ -21,7 +21,8 @@ Route::get('/', array('as' => 'homePage', function()
 Route::get('/about', array('as' => 'aboutPage', function()
 {
     return View::make('pages.about')
-				->with('bodyClass', 'about');
+				->with('bodyClass', 'about')
+				->with('pageTitle', 'About');
 }));
 
 // File

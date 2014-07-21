@@ -37,7 +37,8 @@ class BlogController extends BaseController {
 	{
 		$blogs = $this->blog->getActiveBlogs('8');
 		return View::make('blogs.index')
-					->with('blogs', $blogs);
+					->with('blogs', $blogs)
+					->with('pageTitle', "Blog");
 	}
 
 	/**
@@ -49,8 +50,10 @@ class BlogController extends BaseController {
 	public function getSingle($slug)
 	{
 		$blog = $this->blog->getBySlug($slug);
+		$pageTitle = $blog->title;
 		return View::make('blogs.single')
-					->with('blog', $blog);
+					->with('blog', $blog)
+					->with('pageTitle', $pageTitle);
 	}
 
 	/**
@@ -62,9 +65,12 @@ class BlogController extends BaseController {
 	public function getByCategory($name)
 	{
 		list($category, $blogs) = $this->blog->getByCategoryName($name);
+		$pageTitle = $category->name;
+
 		return View::make('blogs.category')
 					->with('blogs', $blogs)
-					->with('category', $category);
+					->with('category', $category)
+					->with('pageTitle', $pageTitle);
 		
 	}
 
