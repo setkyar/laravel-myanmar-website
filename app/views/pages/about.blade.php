@@ -4,29 +4,36 @@
 
 <section id="main-body" class="row">
   <div class="parent-page-title col-lg-12">
-    <h1>ကျွနု်ပ်တို့အကြောင်း</h1>
+    <h1>ကျွန်ုပ်တို့အကြောင်း</h1>
   </div>
   <div class="main-content col-lg-9">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <section class="row">
-      <div class="col-lg-12">
-        <h4>မြန်မာဘာသာသို့ပြန် အသုံးပြုနည်း</h4>
+	<p>Laravel Myanmar မှာတော့ Laravel နဲ့ပတ်သက်တဲ့ Tutorial တွေ ၊ သတင်းတွေ ဖတ်ရှုနိုင်မယ့်အပြင် ၊ Documentation ကိုလဲ မြန်မာလိုဖတ်ရှုနိုင်မှာဖြစ်ပါတယ်။</p>
+    <section id="what-we-do" class="row" style="margin-top: 10px">
+      <div class="what-we-do-item text-left col-lg-4">
+        <h2 class="app-heading"><a href="http://localhost/laravel-mm/public/blog">ဘလော့ဂ်</a></h2>
+        <p>Laravel သင်ခန်းစာများ ၊ သတင်းများ ၊ Review များကို ပုံမှန်ဖော်ပြပေးလျက်ရှိပါသည်</p>
+      </div>
+      <div class="what-we-do-item text-left col-lg-4">
+        <h2 class="app-heading"><a href="http://localhost/laravel-mm/public/docs">မြန်မာဘာသာသို့ပြန် အသုံးပြုနည်း</a></h2>
         <p>အဖွဲ့ဝင်များအားလုံး စုပေါင်းပြီး Documentation ကို မြန်မာဘာသာဖြင့် ဖတ်ရှုနိုင်ရန် ဘာသာပြန်ထားပါတယ်</p>
       </div>
-      <div class="col-lg-12">
-        <h4>ဆွေးနွေး ၊ မေးမြန်ရန်အတွက် ဖိုရမ်</h4>
-        <p>အတွေ့အကြုံများ ဆွေးနွေးနိုင်မည့်အပြင် မေးခွန်းများမေးမြန်းနိုင်မည့် ဖိုရမ်ရှိပါတယ်</p>
-      </div>
-      <div class="col-lg-12">
-        <h4>နေရာတိုင်းတွင် လူတိုင်း ပူးပေါင်းပါဝင်နိုင်ခြင်း</h4>
-        <p>အသုံးပြုနည်းဘာသာပြန်သည့်အပိုင်းမှ အစ ယခုဝဘ်ဆိုက်တည်ဆောက်သည်အထိ ပူးပေါင်းပါဝင်နိုင်ပါတယ်</p>
+      <div class="what-we-do-item text-left col-lg-4">
+        <h2 class="app-heading"><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">Facebook Group</a></h2>
+        <p>Laravel နှင့်ပတ်သက်သမျှ ဆွေးနွေးနိုင်မည့် အပြင် အခက်အခဲများကို Facebook Group တွင် မေးမြန်းနိုင်ပါတယ်</p>
       </div>
     </section>
+    <p>
+      Laravel Myanmar က တစ်ဦး/တစ်ယောက်အားနဲ့မဟုတ်ဘဲ Contributor တွေရဲ့အားနဲ့ရပ်တည်နေတာဖြစ်ပါတယ်။ သင့်အနေနဲ့လဲ ကျွန်တော်တို့နဲ့ပူးပေါင်းချင်တယ်ဆိုရင် ဝမ်းပန်းတသာ ကြိုဆိုပါတယ်။
+    </p>
+    <h3>Stay Connected with Us</h3>
+    <div class="list-group">
+      <a href="https://twitter.com/Laravel_Myanmar" target="_blank" class="list-group-item">
+        Twitter - @Laravel_Myanmar
+      </a>
+      <a href="https://github.com/laravel-myanmar/" target="_blank" class="list-group-item">Github - https://github.com/laravel-myanmar/</a>
+      <a href="https://www.facebook.com/laravelmyanmar" target="_blank" class="list-group-item">Facebook Page https://www.facebook.com/laravelmyanmar</a>
+      <a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank" class="list-group-item">Facebook Group https://www.facebook.com/groups/laravelmyanmar/</a>
+    </div>
   </div>
   <div class="main-sidebar col-lg-3">
     <ul class="sub-page">

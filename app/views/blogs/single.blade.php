@@ -6,6 +6,9 @@
   <div class="parent-page-title col-lg-12">
     <h1>{{ $blog->title }}</h1>
     <h4 class="blog-meta"><i class="glyphicon glyphicon-user"></i> <a href="{{ route('profile', array($blog->user['profile_url'])) }}">{{ $blog->user->username }}</a> <i class="glyphicon glyphicon-calendar"></i> {{ $blog->created_at->format('d F Y') }} </h4>
+    <div class="social-box">
+      <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Flaravelmyanmar&amp;width=150px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150pxpx; height:35px;" allowTransparency="true"></iframe>
+    </div>
   </div>
   <div class="main-content col-lg-9">
   	<article class="blog-wrap">

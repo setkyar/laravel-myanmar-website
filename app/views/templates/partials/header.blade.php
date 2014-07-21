@@ -37,8 +37,8 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <nav class="main-nav collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-left">
+        <nav class="main-nav collapse navbar-collapse navbar-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
             <li><a href="{{ url('docs') }}">အသုံးပြုနည်းများ</a></li>
             <li><a href="{{ url('blog') }}">ဘလော့ဂ်</a></li>
             <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">ဆွေးနွေးရန်</a></li>
@@ -46,6 +46,10 @@
             <li><a href="{{ url('about') }}">ကျွန်ုပ်တို့အကြောင်း</a></li>
           </ul>
         </nav>
+
+        <div class="navbar-right">
+          <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Flaravelmyanmar&amp;width=150px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150pxpx; height:35px;" allowTransparency="true"></iframe>
+        </div>
     </header>
     @if (Session::has('error'))
         <div class="main-flash-message">
