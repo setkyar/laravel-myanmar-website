@@ -32,7 +32,7 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
     public function getActiveBlogs($perPage = 8)
     {
         // return $this->model->with(array(
-        //                         'user' => function($q) { $q->remember(10080); }, 
+        //                         'user' => function($q) { $q->remember(10080); },
         //                         'categories' => function($q) { $q->remember(10080); }
         //                     ))
         //                     ->remember(10080)
@@ -43,7 +43,7 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
         return $this->model->where('status', 'active')
                             ->orderBy('created_at', 'desc')
                             ->paginate($perPage);
-                            
+
     }
 
     /**
@@ -101,12 +101,12 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
      *
      * @author Hein Zaw Htet
      **/
-    public function getByCategoryName($name)
+    public function getByCategoryName($name, $limit = 8)
     {
 
         $category = $this->category->whereName($name)->first();
 
-        $blogs = $category->blogs()->orderBy('created_at', 'DESC')->paginate('8');
+        $blogs = $category->blogs()->orderBy('created_at', 'DESC')->paginate($limit);
 
         return [ $category, $blogs ];
     }
