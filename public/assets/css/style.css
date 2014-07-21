@@ -169,6 +169,11 @@ img {
 	margin-bottom: 20px;
 	line-height: 28px;
 }
+.blog-content pre {
+	border: none;
+	padding: 0;
+	border-radius: 0;
+}
 .parent-page-title {
 	border-bottom: 1px solid #f0f0f0;
 	padding-bottom: 25px;

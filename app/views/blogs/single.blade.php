@@ -38,3 +38,12 @@
 </section>
 
 @stop
+
+@section('header')
+  <link rel="stylesheet" href="{{ asset('assets/css/peacock.css')}}">
+@stop
+
+@section('footer')
+  <script src="{{ asset('assets/js/highlight.pack.js')}}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+@stop
