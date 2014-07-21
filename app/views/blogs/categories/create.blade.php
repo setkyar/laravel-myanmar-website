@@ -3,10 +3,10 @@
 @section('content')
 
 <section id="main-body" class="row">
-  <div class="parent-page-title col-lg-12">
+  <div class="parent-page-title col-md-12">
     <h1>အမျိုးအစား ပေါင်းထည့်ရန်</h1>
   </div>
-  <div class="main-content col-lg-12">
+  <div class="main-content col-md-12">
   	<form method="post">
      <div class="form-group">
        <input type="text" name="name" class="form-control" placeholder="Name">

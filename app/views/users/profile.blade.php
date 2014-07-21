@@ -1,7 +1,7 @@
 @extends('templates.layouts.default')
 @section('content')
 <section id="main-body" class="profile-content row">
-  <div class="parent-page-title col-lg-12">
+  <div class="parent-page-title col-md-12">
     <h1>{{ $user->username }}</h1>
     <small class="profile-job">
       @if (isset($user->job_position))
@@ -16,7 +16,7 @@
       @endif
     </small>
   </div>
-  <div class="main-sidebar col-lg-3">
+  <div class="main-sidebar col-md-3">
   <div class="profile-gravatar">
     <img src="{{ "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user->email ) ) ) . "?s=" . 200 }}">
   </div>
@@ -25,7 +25,7 @@
       <li><a href="{{ action('UserController@getEdit') }}">Profile ပြင်ရန်</a></li>
     </ul>
   </div>
-  <div class="main-content col-lg-9">
+  <div class="main-content col-md-9">
   <p>
       @if (isset($user->bio))
         {{ $user->bio }}

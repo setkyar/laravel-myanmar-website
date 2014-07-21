@@ -2,10 +2,10 @@
 
 @section('content')
 <section id="main-body" class="row">
-  <div class="parent-page-title col-lg-12">
+  <div class="parent-page-title col-md-12">
     <h1>အသင်းဝင်များ</h1>
   </div>
-  <div class="member-content main-content col-lg-9">
+  <div class="member-content main-content col-md-9">
   @if (count($users) > 0)
     @foreach($users as $user)
       <div class="profile-card">
@@ -31,7 +31,7 @@
     အသင်းဝင်မရှိသေးပါဘူး 
   @endif
   </div>
-  <div class="member-sidebar main-sidebar col-lg-3">
+  <div class="member-sidebar main-sidebar col-md-3">
     <ul>
       <li>Preface
         <ul>

@@ -1,10 +1,10 @@
 @extends('templates.layouts.default')
 @section('content')
 <section id="main-body" class="profile-content row">
-  <div class="parent-page-title col-lg-12">
+  <div class="parent-page-title col-md-12">
     <h1>Profile ပြင်ရန်</h1>
   </div>
-  <div class="main-sidebar col-lg-3">
+  <div class="main-sidebar col-md-3">
   <div class="profile-gravatar">
     <img src="assets/img/1535734_10200320194646041_737002202_n.jpg">
   </div>
@@ -13,7 +13,7 @@
       <li><a href="{{ action('UserController@getEdit') }}" class="active">Profile ပြင်ရန်</a></li>
     </ul>
   </div>
-  <div class="main-content col-lg-9">
+  <div class="main-content col-md-9">
   {{ Form::model($user, array('action' => array('UserController@postEdit'))) }}
         <div class="form-group">
       {{ Form::text('username', Input::old('username'), array('class' => 'form-control', 'placeholder' => 'နာမည်')) }}

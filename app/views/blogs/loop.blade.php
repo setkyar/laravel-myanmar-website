@@ -9,8 +9,8 @@
 	    </figure>
 		  <p class="blog-excerpt">{{ $blog->excerpt }}</p>
 		  <div class="row">
-	    	<div class="col-lg-6"><a class="btn-primary btn" href="{{ route('blogSingle', array($blog->slug) ); }}">ဆက်လက်ဖတ်ရန်</a></div>
-	    	<div class="col-lg-6">
+	    	<div class="col-md-6"><a class="btn-primary btn" href="{{ route('blogSingle', array($blog->slug) ); }}">ဆက်လက်ဖတ်ရန်</a></div>
+	    	<div class="col-md-6">
 	    		<iframe src="//www.facebook.com/plugins/like.php?href={{ route('blogSingle', array($blog->slug) ); }}&amp;width=150px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150pxpx; height:35px;" allowTransparency="true"></iframe>
 	    	</div>
 	    </div>

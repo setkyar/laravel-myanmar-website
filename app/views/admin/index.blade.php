@@ -3,10 +3,10 @@
 @section('content')
 
 <section id="main-body" class="row">
-  <div class="parent-page-title col-lg-12">
+  <div class="parent-page-title col-md-12">
     <h1>Admin Dashboard</h1>
   </div>
-  <div class="admin-content main-content col-lg-12">
+  <div class="admin-content main-content col-md-12">
 	<div class="admin-stats row">
 		<div class="col-xs-6">
 			<div class="panel panel-info">

@@ -15,10 +15,10 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-md-6">
       <a href="#" class="feature-img-modal-btn" id="set-feature-img-btn" data-toggle="modal" data-target="#feature-img-modal">Set Featured Image</a>
     </div>
-    <div class="col-lg-6">
+    <div class="col-md-6">
       <div class="form-group">
         {{ Form::select('category[]', $categories, isset($currentCategories) ? $currentCategories : '', array('multiple' => true, 'class' =>'form-control')) }}
       </div>
@@ -28,10 +28,10 @@
   <nav class="bottom-bar navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10">
+        <div class="col-md-10">
            {{ Form::submit('Submit', array('class' => 'btn-primary btn')) }}
         </div>
-        <div class="col-lg-2">
+        <div class="col-md-2">
           {{ Form::select('status', array('active' => 'Active', 'pending' => 'Pending'), null, array('class' => 'form-control'))}}
         </div>
       </div>
