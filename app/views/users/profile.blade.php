@@ -4,12 +4,12 @@
   <div class="parent-page-title col-lg-12">
     <h1>{{ $user->username }}</h1>
     <small class="profile-job">
-      @if (isset($user->job_position))
+      @if ($user->has_job_position)
         {{ $user->job_position }}
       @elseif (Auth::check() and $user->username == Auth::user()->username)
         <a href="{{ action('UserController@getEdit') }}" class="btn-sm btn-default btn">အလုပ်ရာထူး ထည့်ရန်</a>
       @endif
-      @if (isset($user->job_at))
+      @if ($user->has_job_at)
         at {{ $user->job_at }}
       @elseif (Auth::check() and $user->username == Auth::user()->username)
         <a href="{{ action('UserController@getEdit') }}" class="btn-sm btn-default btn">လုပ်ငန်းနာမည်ထည့်ရန်</a>
