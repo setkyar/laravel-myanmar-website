@@ -1,5 +1,5 @@
 <footer id="main-footer" class="main-footer">
-      <p>Laravel Myanmar is a local community for Laravel - Laravel is a trademark of <a href="https://twitter.com/taylorotwell" target="_blank">Taylar Otwell</a></p>
+      <p>Laravel Myanmar is a local community for Laravel - Laravel is a trademark of <a href="https://twitter.com/taylorotwell" target="_blank">Taylor Otwell</a></p>
       <p>Source code of this website is available on <a href="http://github.com/Laravel-Myanmar/website" target="_blank">Github</a> <!-- - Website is sponsored by <a href="http://myanmarwebdev.com" target="_blank">myanmarwebdev.com</a></p> -->
     </footer>
   </div>
