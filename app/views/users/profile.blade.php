@@ -20,10 +20,12 @@
   <div class="profile-gravatar">
     <img src="{{ "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user->email ) ) ) . "?s=" . 200 }}">
   </div>
+  @if(Auth::check() and $user->username == Auth::user()->username)
     <ul class="sub-page">
       <li><a href="{{ action('UserController@getProfile') }}" class="active">Profile ကြည့်ရန်</a></li>
       <li><a href="{{ action('UserController@getEdit') }}">Profile ပြင်ရန်</a></li>
     </ul>
+  @endif
   </div>
   <div class="main-content col-md-9">
   <p>

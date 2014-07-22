@@ -404,3 +404,6 @@ img {
 select[name="category[]"] {
 	height: 132px;
 }
+.list-group a {
+	border-radius: 0 !important;
+}

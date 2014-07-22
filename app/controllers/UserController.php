@@ -27,10 +27,8 @@ class UserController extends BaseController {
         $this->profileValidator  = $profileValidator;
 
         $this->beforeFilter('auth', array(
-        	'only' => array(
-        		'getEdit',
-        		'getLogout',
-        		'postEdit'
+        	'except' => array(
+        		'getIndex'
         		)
         	));
     }
