@@ -30,9 +30,7 @@ class UserController extends BaseController {
         	'except' => array(
         		'getIndex',
         		'getLogin',
-        		'postLogin',
-        		'getRegister',
-        		'postRegister'
+        		'postLogin'
         		)
         	));
     }
