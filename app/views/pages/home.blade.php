@@ -12,7 +12,7 @@
         <p>Laravel သင်ခန်းစာများ ၊ သတင်းများ ၊ Review များကို ပုံမှန်ဖော်ပြပေးလျက်ရှိပါသည်</p>
       </div>
       <div class="what-we-do-item col-md-4">
-        <h2 class="app-heading"><a href="{{ url('docs') }}">မြန်မာဘာသာသို့ပြန် အသုံးပြုနည်း</a></h2>
+        <h2 class="app-heading"><a href="{{ url('docs') }}">မြန်မာဘာသာပြန်ထားသော အသုံးပြုနည်း</a></h2>
         <p>အဖွဲ့ဝင်များအားလုံး စုပေါင်းပြီး Documentation ကို မြန်မာဘာသာဖြင့် ဖတ်ရှုနိုင်ရန် ဘာသာပြန်ထားပါတယ်</p>
       </div>
       <div class="what-we-do-item col-md-4">
