@@ -28,7 +28,9 @@ class UserController extends BaseController {
 
         $this->beforeFilter('auth', array(
         	'except' => array(
-        		'getIndex'
+        		'getIndex',
+        		'getLogin',
+        		'postLogin'
         		)
         	));
     }
