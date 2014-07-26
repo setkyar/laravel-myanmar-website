@@ -150,11 +150,10 @@ class UserController extends BaseController {
 			{
 			    return \Redirect::to('/')
 			    				->with('success', 'အောင်မြင်စွာ ဝင်ရောက်နိုင်ခဲ့ပါပြီ');
-			} else {
-				return \Redirect::action('UserController@getLogin')
-								->withInput()
-								->with('error', 'အီးမေလ် (သို့) စကားဝှက်မှားနေပါတယ်');
 			}
+			return \Redirect::action('UserController@getLogin')
+							->withInput()
+							->with('error', 'အီးမေလ် (သို့) စကားဝှက်မှားနေပါတယ်');
 		} else {
 			return \Redirect::action('UserController@getLogin')
 							->withInput()
