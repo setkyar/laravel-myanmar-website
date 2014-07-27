@@ -1,4 +1,14 @@
 <div class="main-sidebar col-md-3">
+	<h6 class="sidebar-title">Search</h6>
+	<div class="search-box">
+	  	{{ Form::open(array('url' => 'search', 'method' => 'GET')) }}
+	  		<div class="form-group">
+	  			{{ Form::text('query', '', array('class' => 'form-control', 'placeholder' => 'Search')) }}
+	  		</div>
+	  		{{ Form::submit('Search', array('class' => 'btn btn-primary')) }}
+	  	{{ Form::close() }}
+  	</div>
+
 	<h6 class="sidebar-title">Categories</h6>
 	<ul class="sub-page">
 		@foreach ($categories as $category)

@@ -55,6 +55,10 @@ Route::controller('/user', 'UserController');
 Route::get('/members', array('as' => 'membersList', 'uses' => 'UserController@getIndex'));
 Route::get('/profile/{profile_url?}', array('as' => 'profile', 'uses' => 'UserController@getProfile'));
 
+
+//Search
+Route::controller('/search', 'SearchController');
+
 // array('as' => 'blogSingle', 'uses' => 'BlogController@getSingle')
 
 // Bind Interfaces to repository

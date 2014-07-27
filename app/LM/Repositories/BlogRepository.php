@@ -106,9 +106,23 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
 
         $category = $this->category->whereName($name)->first();
 
-        $blogs = $category->blogs()->orderBy('created_at', 'DESC')->paginate($limit);
+        $blogs = $category->blogs()->orderBy('created_at', 'DESC')
+                                    ->paginate($limit);
 
         return [ $category, $blogs ];
+    }
+
+    /**
+     * Search blog by title or content
+     *
+     * @author Hein Zaw Htet
+     **/
+    public function getSearch($query, $limit = 8)
+    {
+        return $this->model->orWhere('title', 'LIKE', '%'.$query.'%')
+                            ->orWhere('content', 'LIKE', '%'.$query.'%')
+                            ->orderBy('created_at', 'desc')
+                            ->paginate($limit);
     }
 
 }

@@ -62,4 +62,6 @@ abstract class AbstractRepository
         $model = $this->findById($id);
         return $model->delete();
     }
+
+
 }
