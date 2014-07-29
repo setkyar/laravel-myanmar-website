@@ -28,15 +28,27 @@
   @endif
   </div>
   <div class="main-content col-md-9">
-  <p>
-      @if (isset($user->bio))
-        {{ $user->bio }}
-      @elseif (Auth::check() and $user->username == Auth::user()->username)
-        <a href="{{ action('UserController@getEdit') }}" class="btn-sm btn-default btn">ကိုယ့်အကြောင်း အတိုချုပ်ရေးရန်</a>
-      @else
-        <small class="alert alert-warning">သူ့အကြောင်းအတိုချုပ် ရေးထားခြင်းမရှိပါ</small>
-      @endif
-  </p>
+  
+    @if (isset($user->bio))
+      {{ Markdown::text($user->bio) }}
+    @elseif (Auth::check() and $user->username == Auth::user()->username)
+      <a href="{{ action('UserController@getEdit') }}" class="btn-sm btn-default btn">ကိုယ့်အကြောင်း အတိုချုပ်ရေးရန်</a>
+    @else
+      <small class="alert alert-warning">သူ့အကြောင်းအတိုချုပ် ရေးထားခြင်းမရှိပါ</small>
+    @endif
+  <hr>
+    <div class="profile-blog-panel panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">My blogs</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        @foreach ($user->blogs as $blog)
+          <li><a href="{{ route('blogSingle', array($blog->slug) ); }}">{{ $blog->title }}</a></li>
+        @endforeach
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 @stop

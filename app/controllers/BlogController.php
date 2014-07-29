@@ -129,10 +129,7 @@ class BlogController extends BaseController {
 		$data = array_add($data, 'user_id', Auth::user()->id);
 		$blog = $this->blog->create($data);
 		$blog->categories()->sync(Input::get('category'));
-		return \Redirect::to('/blog')
-                        ->with('success', 'သင့် ဘလော့ထည့်သွင်းပြီးသွားပါပြီ');
-
-		return \Redirect::route('blogEdit', array('id' => $blid))
+		return \Redirect::route('blogEdit', array('id' => $blog->id))
                         ->with('success', "သင့် ဘလော့ထည့်သွင်းပြီးသွားပါပြီ");
 	}
 

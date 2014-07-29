@@ -21,7 +21,9 @@ class UserRepository extends AbstractRepository implements UserRepositoryInterfa
 
     public function findByProfileUrl($profile_url)
     {
-        return $this->model->where('profile_url', '=', $profile_url)->first();
+        return $this->model->where('profile_url', '=', $profile_url)
+                            ->with('blogs')
+                            ->first();
     }
 
     public function blogs()

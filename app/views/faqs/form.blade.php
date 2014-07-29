@@ -1,28 +1,14 @@
   <div class="form-group">
-    {{ Form::text('title', Input::old('title'), array('id' => 'title', 'class' => 'form-control input-lg', 'placeholder' => 'Title')) }}
+    {{ Form::text('question', Input::old('question'), array('id' => 'question', 'class' => 'form-control input-lg', 'placeholder' => 'Question')) }}
   </div>
   <div class="form-group">
     {{ Form::text('slug', Input::old('slug'), array('id' => 'slug', 'class' => 'form-control input-sm', 'placeholder' => 'Slug')) }}
   </div>
   <div class="form-group">
-    {{ Form::textarea('content', Input::old('content'), array('id' => 'content', 'class' => 'form-control', 'placeholder' => 'Content', 'rows' => '10', 'data-provide' => 'markdown')) }}
+    {{ Form::textarea('answer', Input::old('answer'), array('id' => 'answer', 'class' => 'form-control', 'placeholder' => 'Answer', 'rows' => '10', 'data-provide' => 'markdown')) }}
   </div>
   <div class="form-group">
-    {{ Form::textarea('excerpt', Input::old('excerpt'), array('class' => 'form-control', 'placeholder' => 'Excerpt', 'rows' => '4')) }}
-  </div>
-  <div class="form-group">
-    {{ Form::hidden('featured_img', Input::old('featured_img'), array('id' => 'featured_img', 'class' => 'form-control', 'placeholder' => 'Featured Image')) }}
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <a href="#" class="feature-img-modal-btn" id="set-feature-img-btn" data-toggle="modal" data-target="#feature-img-modal">Set Featured Image</a>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        {{ Form::select('category[]', $categories, isset($currentCategories) ? $currentCategories : '', array('multiple' => true, 'class' =>'form-control')) }}
-      </div>
-    </div>
+    {{ Form::textarea('errors', Input::old('errors'), array('id' => 'errors', 'class' => 'form-control', 'placeholder' => 'Errors Messages (Seperating by comma is ok)', 'rows' => '5')) }}
   </div>
 
   <nav class="bottom-bar navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -86,6 +72,6 @@
   <script type="text/javascript" src="{{ asset('assets/js/to-markdown.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/boostrap-markdown.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/dropzone.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('assets/js/blogCreate.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('assets/js/faqCreate.js') }}"></script>
  
 @stop

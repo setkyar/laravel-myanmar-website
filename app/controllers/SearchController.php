@@ -23,16 +23,15 @@ class SearchController extends BaseController {
 	public function getIndex() 
 	{
 		$query = e(Input::get('query'));
-
 		// Just a teaser. don't take it seriously.
 		if (strpos($query,'&lt;script') !== false) {
     		return View::make('search.meme');
 		}
-		
+
 		$results = $this->blog->getSearch($query);
 		return View::make('search.result')
 					->with('results', $results)
 					->with('query', $query);
-		
+
 	}
 }

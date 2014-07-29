@@ -30,10 +30,6 @@
 
 
 ### License
-For -
-- Everyone except who don't love Laravel
-- Everywhere.
-
 Do - 
 - Use for your own project
 - Use codes or files as a part of your project

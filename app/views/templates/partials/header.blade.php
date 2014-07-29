@@ -44,11 +44,12 @@
             <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">ဆွေးနွေးရန်</a></li>
             <!-- <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li> -->
             <li><a href="{{ url('about') }}">ကျွန်ုပ်တို့အကြောင်း</a></li>
+            <li><a href="{{ url('faqs') }}">အမေးများသော မေးခွန်းများ</a></li>
           </ul>
         </nav>
 
         <div class="navbar-right">
-          <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Flaravelmyanmar&amp;width=150px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150pxpx; height:35px;" allowTransparency="true"></iframe>
+          <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Flaravelmyanmar&amp;width=100&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:35px;" allowTransparency="true"></iframe>
         </div>
     </header>
     @if (Session::has('error'))

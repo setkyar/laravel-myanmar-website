@@ -25,6 +25,19 @@ Route::get('/about', array('as' => 'aboutPage', function()
 				->with('pageTitle', 'About');
 }));
 
+Route::get('/faqs/search', array('uses' => 'FaqController@getSearch', 'as' => 'faqSearch'));
+Route::get('/faqs/{slug}', array('uses' => 'FaqController@getSingle', 'as' => 'faqSingle'));
+Route::controller('/faqs', 'FaqController');
+Route::group(array('prefix' => 'admin'), function()
+{
+
+    Route::get('faqs', array('uses' => 'FaqController@getAdminIndex', 'as' => 'faqAdmin'));
+    Route::get('faqs/create', array('uses' => 'FaqController@getCreate', 'as' => 'faqCreate'));
+	Route::get('faqs/edit/{id}', array('uses' => 'FaqController@getEdit', 'as' => 'faqEdit'));
+	Route::get('faqs/delete/{id}', array('uses' => 'FaqController@getDelete', 'as' => 'faqDelete'));
+
+});
+
 // File
 Route::controller('/file', 'FileController');
 
@@ -85,6 +98,11 @@ App::bind(
 App::bind(
 	'LM\Interfaces\FileRepositoryInterface',
 	'LM\Repositories\FileRepository'
+);
+
+App::bind(
+	'LM\Interfaces\FaqRepositoryInterface',
+	'LM\Repositories\FaqRepository'
 );
 
 // View Composers

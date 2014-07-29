@@ -31,6 +31,17 @@
               </li>
             </ul>
           </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faqs <span class="label label-warning">New</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="{{ url('/admin/faqs') }}"><i class="glyphicon glyphicon-eye-open"></i> View All Faqs</a>
+              </li>
+              <li>
+                <a href="{{ url('/admin/faqs/create') }}"><i class="glyphicon glyphicon-plus"></i> Add New Faq</a>
+              </li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -50,7 +61,7 @@
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
     @yield('footer')
-    <script>
+    <!-- <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -59,6 +70,6 @@
       ga('create', 'UA-52997465-1', 'auto');
       ga('send', 'pageview');
 
-    </script>
+    </script> -->
   </body>
 </html>

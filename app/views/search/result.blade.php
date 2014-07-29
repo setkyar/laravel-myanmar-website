@@ -17,19 +17,24 @@
 	  	{{ Form::close() }}
   	</div>
   	<hr>
-    @if($results->count())
-		@foreach ($results as $result)
-			<article class="blog-wrap">
-				<p class="blog-date">{{ $result->created_at->format('d F Y') }}</p>
-			  <h1 class="blog-title"><a href="{{ route('blogSingle', array($result->slug) ); }}">{{ $result->title }}</a></h1>
-			  <h4 class="blog-author">by <a href="{{ route('profile', array($result->user['profile_url'])) }}">{{ $result->user['username'] }}</a></h4>
-			  <p class="blog-excerpt">{{ $result->excerpt }}</p>
-		  </article>
-		@endforeach
-		{{ $results->links() }}
-	@else
-		<h3>မည်သည့် ရလဒ်မှရှာမတွေ့ပါ ။</h3>
-	@endif
+  	@if($query)
+      <h3>Result</h3>
+	    @if($results->count())
+			@foreach ($results as $result)
+				<article class="blog-wrap">
+					<p class="blog-date">{{ $result->created_at->format('d F Y') }}</p>
+				  <h1 class="blog-title"><a href="{{ route('blogSingle', array($result->slug) ); }}">{{ $result->title }}</a></h1>
+				  <h4 class="blog-author">by <a href="{{ route('profile', array($result->user['profile_url'])) }}">{{ $result->user['username'] }}</a></h4>
+				  <p class="blog-excerpt">{{ $result->excerpt }}</p>
+			  </article>
+			@endforeach
+			{{ $results->links() }}
+		@else
+			<h3>မည်သည့် ရလဒ်မှရှာမတွေ့ပါ ။</h3>
+		@endif
+    @else
+        <div class="alert alert-warning" role="alert">စကားလုံးတစ်လုံး အနည်းဆုံးလိုအပ်ပါတယ်</div>
+    @endif
   </div>
 </section>
 
