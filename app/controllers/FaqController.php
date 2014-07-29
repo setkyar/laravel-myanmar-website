@@ -12,6 +12,16 @@ class FaqController extends BaseController {
     public function __construct(FaqRepositoryInterface $faq)
     {
         $this->faq = $faq;
+        $this->beforeFilter('auth', array(
+        	'only' => array(
+        		'getCreate',
+        		'getEdit',
+        		'postCreate',
+        		'postEdit',
+        		'anyDelete',
+        		'getAdminIndex'
+        		)
+        	));
     }
 
 	/**
