@@ -121,8 +121,8 @@ class FaqController extends BaseController {
 	{
 		$data = Input::all();
 		$data = array_add($data, 'user_id', Auth::user()->id);
-		$blog = $this->faq->create($data);
-		return \Redirect::route('blogEdit', array('id' => $blog))
+		$faq = $this->faq->create($data);
+		return \Redirect::route('faqEdit', array('id' => $faq->id))
                         ->with('success', "သင့် Faq ထည့်သွင်းပြီးသွားပါပြီ");
 	}
 
