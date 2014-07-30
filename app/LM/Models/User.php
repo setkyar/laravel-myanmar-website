@@ -87,6 +87,11 @@ class User extends \Eloquent implements UserInterface, RemindableInterface {
         return $this->hasMany('LM\Models\Blog');
     }
 
+    public function faqs()
+    {
+        return $this->hasMany('LM\Models\Faq');
+    }
+
     public function getHasJobPositionAttribute()
     {
     	if ( isset($this->attributes['job_position']) and

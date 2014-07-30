@@ -57,7 +57,7 @@ class CategoryController extends BaseController {
     {
         $data = Input::all();
         $category = $this->category->create($data);
-        return \Redirect::to('/blog/category')
+        return \Redirect::to('admin/blog/category')
                         ->with('success', 'အမျိုးအစား ပေါင်းထည့်ပြီးပါပြီ');
     }
 

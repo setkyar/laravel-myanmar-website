@@ -30,7 +30,8 @@ class UserController extends BaseController {
         	'except' => array(
         		'getIndex',
         		'getLogin',
-        		'postLogin'
+        		'postLogin',
+        		'getProfile'
         		)
         	));
     }
@@ -57,8 +58,8 @@ class UserController extends BaseController {
     	if ($profile_url === null) {
     		$profile_url = Auth::user()->profile_url;
     	}
-    	$pageTitle = Auth::user()->username;
     	$user = $this->users->findByProfileUrl($profile_url);
+    	$pageTitle = $user->username;
     	return View::make('users.profile')
     				->with('user', $user)
     				->with('pageTitle', $pageTitle);

@@ -271,6 +271,20 @@ img {
 	color: #2ECC40;
 	font-size: 12px;
 }
+.profile-blog-panel ul {
+	padding: 0;
+}
+.profile-blog-panel li {
+	list-style: none;
+}
+.profile-blog-panel li:first-child a {
+	border-top: none;
+}
+.profile-blog-panel li a {
+	display: block;
+	padding: 10px 5px;
+	border-top: 1px solid #f1f1f1;
+}
 .profile-card {
 	border: 1px solid #f0f0f0;
 	padding-top: 10px;
@@ -437,4 +451,40 @@ select[name="category[]"] {
 .search-result .blog-author {
 	font-size: 14px;
 	margin: 0;
+}
+
+/* Accordian */
+.panel-group .panel {
+	border-radius: 0;
+}
+
+/* FAQs */
+.faq-list .panel-heading {
+	border-radius: 0;
+}
+.faq-list .panel-heading:hover {
+	background: #f1f1f1;
+}
+.faq-list .panel-title a {
+	display: block;
+	text-decoration: none;
+}
+.faq-list .author {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	margin: 0;
+	margin-top: 5px;
+	line-height: 12px;
+}
+.faq-list .author a {
+	font-size: 12px;
+	color: #999;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+/* Panels */
+.panel {
+	border-radius: 0;
 }

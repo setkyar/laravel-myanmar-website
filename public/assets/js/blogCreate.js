@@ -1,6 +1,4 @@
-
 	$('#slug').slugify('#title');
-	wideArea();
 
 	Dropzone.autoDiscover = false;
 	if ($('#featured_img').val().length > 0) {
@@ -34,7 +32,7 @@
 	          name: "uploadFile",
 	          data: [{
 	            name: "cmdBeer",
-	            title: "Upllad Image",
+	            title: "Upload Image",
 	            toggle: true,
 	            icon: "glyphicon glyphicon-picture",
 	            callback: function(e){
