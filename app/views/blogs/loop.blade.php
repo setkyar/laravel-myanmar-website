@@ -9,7 +9,11 @@
 	    </figure>
 		  <p class="blog-excerpt">{{ $blog->excerpt }}</p>
 		  <div class="row">
-	    	<div class="col-md-6"><a class="btn-primary btn" href="{{ route('blogSingle', array($blog->slug) ); }}">ဆက်လက်ဖတ်ရန်</a></div>
+	    	<div class="col-md-4"><a class="btn-primary btn" href="{{ route('blogSingle', array($blog->slug) ); }}">ဆက်လက်ဖတ်ရန်</a></div>
+	    	<div class="col-md-2">
+	    		<a href="https://twitter.com/share" class="twitter-share-button" data-text="http://laravelmyanmar.com/blog" data-via="Laravel_Myanmar" data-hashtags="Laravel_Myanmar" data-dnt="true">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	    	</div>
 	    	<div class="col-md-6">
 	    		<iframe src="//www.facebook.com/plugins/like.php?href={{ route('blogSingle', array($blog->slug) ); }}&amp;width=150px&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=195310000651099" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150pxpx; height:35px;" allowTransparency="true"></iframe>
 	    	</div>

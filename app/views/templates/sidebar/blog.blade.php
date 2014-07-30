@@ -5,7 +5,7 @@
 	  		<div class="form-group">
 	  			{{ Form::text('query', '', array('class' => 'form-control', 'placeholder' => 'Search')) }}
 	  		</div>
-	  		{{ Form::submit('Search', array('class' => 'btn btn-primary')) }}
+	  		{{ Form::submit('Search', array('class' => 'btn btn-primary', 'style' => 'width:100%;')) }}
 	  	{{ Form::close() }}
   	</div>
 
