@@ -1,3 +1,7 @@
+/*
+Name : Fixing font issue for Mac
+Author : Hein Zaw Htet
+*/
 $(document).ready(function(){
 	// Fix font issue for MAC
 	var OSName="Other";
@@ -5,7 +9,6 @@ $(document).ready(function(){
 	if (OSName == "MacOS") {
         $.ajax({
             url:"/assets/css/tharlon.css",
-            // dataType:"script",
             success:function(data){
                  $("head").append("<style>" + data + "</style>");
             }
