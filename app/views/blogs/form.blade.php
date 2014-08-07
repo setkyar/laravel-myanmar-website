@@ -5,7 +5,7 @@
     {{ Form::text('slug', Input::old('slug'), array('id' => 'slug', 'class' => 'form-control input-sm', 'placeholder' => 'Slug')) }}
   </div>
   <div class="form-group">
-    {{ Form::textarea('content', Input::old('content'), array('id' => 'content', 'class' => 'form-control', 'placeholder' => 'Content', 'rows' => '10', 'data-provide' => 'markdown')) }}
+    {{ Form::textarea('content', Input::old('content'), array('id' => 'content', 'class' => 'form-control', 'placeholder' => 'Content', 'rows' => '20', 'data-provide' => 'markdown')) }}
   </div>
   <div class="form-group">
     {{ Form::textarea('excerpt', Input::old('excerpt'), array('class' => 'form-control', 'placeholder' => 'Excerpt', 'rows' => '4')) }}

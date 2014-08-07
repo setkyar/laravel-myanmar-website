@@ -32,7 +32,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faqs <span class="label label-warning">New</span> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faqs<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li>
                 <a href="{{ url('/admin/faqs') }}"><i class="glyphicon glyphicon-eye-open"></i> View All Faqs</a>

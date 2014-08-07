@@ -84,14 +84,16 @@ img {
 	color: #fb503b;
 	font-size: 14px;
 	padding: 5px;
+	margin-top: 3px;
+	margin-right: 15px;
 }
 #main-header .navbar-left, #main-header .navbar-right {
 	border-left: 1px solid #f0f0f0;
 }
 #main-header .navbar-right {
 	padding-left: 10px;
-	height: 50px;
-	padding-top: 10px;
+	height: 67px;
+	padding-top: 18px;
 }
 #main-header .main-nav a {
 	font-size: 12px;
@@ -99,6 +101,11 @@ img {
 }
 #main-header .main-nav a:hover {
 	color: #333;
+}
+#main-header .main-nav li i {
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
 }
 #main-header .user-nav > a {
 	border: 2px solid #f0f0f0;
@@ -176,6 +183,12 @@ img {
 .blog-content {
 	margin-bottom: 20px;
 	line-height: 28px;
+}
+.blog-content ul {
+	
+}
+.blog-content li {
+	list-style: circle;
 }
 .blog-content pre {
 	border: none;

@@ -42,12 +42,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <nav class="main-nav collapse navbar-collapse navbar-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{{ url('docs') }}">အသုံးပြုနည်းများ</a></li>
-            <li><a href="{{ url('blog') }}">ဘလော့ဂ်</a></li>
-            <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank">ဆွေးနွေးရန်</a></li>
+            <li><a href="{{ url('docs') }}"><i class="glyphicon glyphicon-info-sign"></i> အသုံးပြုနည်းများ</a></li>
+            <li><a href="{{ url('blog') }}"><i class="glyphicon glyphicon-book"></i> ဘလော့ဂ်</a></li>
+            <li><a href="https://www.facebook.com/groups/laravelmyanmar/" target="_blank"><i class="
+glyphicon glyphicon-comment"></i> ဆွေးနွေးရန်</a></li>
             <!-- <li><a href="{{ url('members') }}">အသင်းဝင်များ</a></li> -->
-            <li><a href="{{ url('about') }}">ကျွန်ုပ်တို့အကြောင်း</a></li>
-            <li><a href="{{ url('faqs') }}">အမေးများသော မေးခွန်းများ</a></li>
+            <li><a href="{{ url('about') }}"><i class="glyphicon glyphicon-info-sign"></i> ကျွန်ုပ်တို့အကြောင်း</a></li>
+            <li><a href="{{ url('faqs') }}"><i class="glyphicon glyphicon-question-sign"></i> အမေးများသော မေးခွန်းများ</a></li>
           </ul>
         </nav>
 
