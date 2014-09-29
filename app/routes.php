@@ -9,7 +9,15 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+Route::get('/model', function() {
+	// return LM\Models\Blog::all();
+	$data = array(
+		array('id' => '1', 'title' => 'Hello'),
+		array('id' => '2', 'title' => 'Second'),
+	);
+	header('Content-Type: application/json');
+	return json_encode($data);
+});
 // TODO : Clean up and organize routes
 Route::controller('password', 'RemindersController');
 // Pages
@@ -56,9 +64,8 @@ Route::any('/admin/blog/delete/{id}', array('uses' => 'BlogController@anyDelete'
 
 // Blog Categories
 Route::get('admin/blog/category', array('uses' => 'CategoryController@getAdminIndex', 'as' => 'categoryAdminIndex'));
-
-
 Route::get('/admin/blog/category/create', array('uses' => 'CategoryController@getCreate', 'as' => 'categoryCreate'));
+Route::any('/admin/blog/category/delete/{id}', array('uses' => 'CategoryController@anyDelete', 'as' => 'categoryDelete'));
 
 Route::controller('/admin', 'AdminController');
 

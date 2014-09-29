@@ -61,4 +61,18 @@ class CategoryController extends BaseController {
                         ->with('success', 'အမျိုးအစား ပေါင်းထည့်ပြီးပါပြီ');
     }
 
+    /**
+     * Deleting category by ID
+     *
+     * @return Redirect
+     * @author Hein Zaw Htet
+     **/
+    public function anyDelete($id)
+    {
+        $category = $this->category->findById($id);
+        $category->delete($id);
+        return \Redirect::route('categoryAdminIndex')
+                        ->with('success', "ဖျက်ပြီးပါပြီ");
+    }
+
 }

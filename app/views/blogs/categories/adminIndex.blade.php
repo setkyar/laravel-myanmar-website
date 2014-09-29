@@ -18,7 +18,7 @@
         <td class="text-right">
           <a href="#" class="btn-info btn"><i class="glyphicon glyphicon-eye-open"></i></a>
           <a href="#" class="btn-warning btn"><i class="glyphicon glyphicon-edit"></i></a>
-          <a href="#" class="btn-danger btn"><i class="glyphicon glyphicon-remove"></i></a>
+          <a href="{{ route('categoryDelete', array('id' => $category->id)) }}" class="btn-danger btn"><i class="glyphicon glyphicon-remove"></i></a>
         </td>
       </tr>
     @endforeach
